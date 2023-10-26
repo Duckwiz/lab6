@@ -1,7 +1,7 @@
 # Matthew Cardenas
 
 # encoder & decoder functions
-def encoder(passw):
+def encoder(passw):         # Cardenas
     encoded_passw = ''
 
     for num in passw:
@@ -16,9 +16,14 @@ def encoder(passw):
     return encoded_passw
 
 
-def decoder(encoded_passw):
-    # your code here
-    pass
+def decoder(encoded_passw):         # Gao
+    decoded_passw = ""
+    for item in encoded_passw:
+        number = int(item)-3
+        if number < 0:
+            number = 10+int(item)-3
+        decoded_passw += str(number)
+    return decoded_passw
 
 
 # main loop for menu
